@@ -24,15 +24,15 @@ def clientthread(s, conn):
     conn.send('This is the Mac')
     conn.send('... and this is another message')
     data = conn.recv(1024)
-    print("REPLY: " + str(data))
+    print(f"REPLY: {str(data)}")
     conn.close()
     s.close()
     sys.exit()
-     
+
     while True:
          
         data = conn.recv(1024)
-        print("REPLY: " +str(data))
+        print(f"REPLY: {str(data)}")
         if not data: 
             print("Disconnected!")
             break
